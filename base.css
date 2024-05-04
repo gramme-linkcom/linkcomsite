@@ -1,0 +1,89 @@
+#header {
+  position: fixed;
+  background: #252525;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .7);
+  height: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .3s cubic-bezier(.4, 0, .2, 1);
+  top: 10px;
+  width: 90%;
+  z-index: 199999;
+}
+
+.header-logo {
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3%;
+  width: 190px;
+}
+
+.head-animation {
+  transform: translateY(-100%);
+}
+
+main {
+  position: relative;
+  background-color: white;
+  min-height: 1080px;
+  height: 1300px;
+  max-height: fit-content;
+}
+
+footer {
+  background-color: #24242456;
+  color: #fff;
+  height: 300px;
+  padding: 40px;
+  text-align: left;
+  text-shadow: 3px 3px 3px #808080;
+}
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box {
+  position   : relative;
+  width      : 100%;
+  height     : calc(100vw / 16 * 9 + 56px);
+  margin     : auto;
+  overflow   : hidden;
+}
+
+/* --- 背景の指定 ------------------------------------------- */
+.box .bgImg {
+  position   : absolute;
+  top        : 56px;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 15s infinite;   /* 4画像 × 各5s = 20s */
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.box .src1 {
+  background-image : url(./top.png);   /* 背景の画像を指定 */
+  background-size: cover;
+  resize: both;
+}
+.box .src2 {
+  background-image : url(./CSMC.png);   /* 背景の画像を指定 */
+  animation-delay  : 5s;
+  background-size: cover;
+  resize: both;
+}
+.box .src3 {
+  background-image : url(./Conet_Dev.png);   /* 背景の画像を指定 */
+  animation-delay  : 10s;
+  background-size: cover;
+  resize: both;
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  40% { opacity: 0; }
+ 100% { opacity: 0; }
+}
