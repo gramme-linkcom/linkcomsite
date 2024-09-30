@@ -64,7 +64,7 @@ main{
         font-size: 1.6rem;
     }
     .content{
-        width: 90%;
+        width: 90vw;
     }
 }
 @media screen and (min-width: 966px){
