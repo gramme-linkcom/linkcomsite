@@ -23,6 +23,9 @@ window.onpageshow = function(event) {
             } else if (data_json == "Cert_time_failed"){
                 sub_title.innerText = "認証時間切れ"
                 sub_content.innerText = "認証コードを再発行してください (252)"
+            } else if (data_json == "Has_certed"){
+                sub_title.innerText = "既に認証済みです"
+                sub_content.innerText = "アプリで操作してください"
             }
             return;
         }).fail(function(data){
